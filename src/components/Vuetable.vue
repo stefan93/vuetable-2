@@ -988,7 +988,7 @@ export default {
       if ( ! this.hasCallback(field)) return
 
       if(typeof(field.callback) == 'function') {
-       return field.callback(this.getObjectValue(item, field.name))
+       return field.callback(this.getObjectValue(item, field.name), item)
       }
 
       let args = field.callback.split('|')
