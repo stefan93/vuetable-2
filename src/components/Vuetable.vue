@@ -998,8 +998,8 @@ export default {
         let value = this.getObjectValue(item, field.name)
 
         return (args.length > 0)
-          ? this.$parent[func].apply(this.$parent, [value].concat(args))
-          : this.$parent[func].call(this.$parent, value)
+          ? this.$parent[func].apply(this.$parent, [value].concat(args), item)
+          : this.$parent[func].call(this.$parent, value, item)
       }
 
       return null
